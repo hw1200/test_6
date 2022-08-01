@@ -77,7 +77,7 @@ int main()
 
 	pointer_self_add();
 	
-	system(pause);
+	system("pause");
 
 	return 0;
 }
