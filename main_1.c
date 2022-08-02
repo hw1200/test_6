@@ -7,21 +7,21 @@ void use_malloc()
 {
 	int len;
 	char* p;
-	printf("ÇëÊäÈëÒªÉêÇëµÄ¿Õ¼ä´óĞ¡:");
+	printf("è¯·è¾“å…¥è¦ç”³è¯·çš„ç©ºé—´å¤§å°:");
 	scanf("%d", &len);
-	p = (char*)malloc(len);//Ê¹ÓÃmalloc¶¯Ì¬ÉêÇë¶Ñ¿Õ¼ä
+	p = (char*)malloc(len);//ä½¿ç”¨mallocåŠ¨æ€ç”³è¯·å †ç©ºé—´
 	if (p != NULL)
 	{
 		strcpy(p, "hello");
 		puts(p);
 	}
-	//p++;²»ÄÜÆ«ÒÆ,Èç¹ûÒªÆ«ÒÆ,Òª´æ×î³õµÄÎ»ÖÃ,freeÊ±,¸øfreeµÄÖ¸Õë±ØĞëÊÇ×î³õmalloc·µ»ØµÄ
+	//p++;ä¸èƒ½åç§»,å¦‚æœè¦åç§»,è¦å­˜æœ€åˆçš„ä½ç½®,freeæ—¶,ç»™freeçš„æŒ‡é’ˆå¿…é¡»æ˜¯æœ€åˆmallocè¿”å›çš„
 	free(p);
 }
 
 void pointer_init()
 {
-	char* p = "hello";//×Ö·û´®³£Á¿µØÖ·¸³Öµ¸øp;
+	char* p = "hello";//å­—ç¬¦ä¸²å¸¸é‡åœ°å€èµ‹å€¼ç»™p;
 	char c[10] = "hello";//strcpy(c,"hello");
 	c[0] = 'H';
 	//p[0] = 'H';
@@ -34,7 +34,7 @@ void pointer_init()
 {
 	char c[10] = "hello";
 	return c;
-}*///º¯ÊıÖ´ĞĞ½áÊøºó,¶ÔÓ¦º¯ÊıÊ¹ÓÃµÄÕ»¿Õ¼ä¾Í»áÊÍ·Å
+}*///å‡½æ•°æ‰§è¡Œç»“æŸå,å¯¹åº”å‡½æ•°ä½¿ç”¨çš„æ ˆç©ºé—´å°±ä¼šé‡Šæ”¾
 char* stack_string()
 {
 	char* p = (char*)malloc(10);
@@ -44,7 +44,7 @@ char* stack_string()
 	}
 	//p = "hello";
 	return p;
-}//¶Ñ¿Õ¼äÔÚº¯ÊıÖ´ĞĞ½áÊøºó²»»áÊÍ·Å
+}//å †ç©ºé—´åœ¨å‡½æ•°æ‰§è¡Œç»“æŸåä¸ä¼šé‡Šæ”¾
 void stack_heap()
 {
 	char* p;
@@ -60,7 +60,7 @@ void wild_pointer()
 	p2 = (int*)malloc(4);
 	*p2 = 2;
 	free(p1);
-	p1 = NULL;//freeºóµÄ¿Õ¼ä,Ò»¶¨Òª¶Ôp1ÖÃÎªNULL,·ñÔòp1ÎªÒ°Ö¸Õë
+	p1 = NULL;//freeåçš„ç©ºé—´,ä¸€å®šè¦å¯¹p1ç½®ä¸ºNULL,å¦åˆ™p1ä¸ºé‡æŒ‡é’ˆ
 	p3 = (int*)malloc(4);
 	*p3 = 3;
 	printf("*p3 = %d\n", *p3);
@@ -70,11 +70,11 @@ void wild_pointer()
 
 void use_const()
 {
-	const char* p;//´ú±í²»ÄÜÓÃpÈ¥ĞŞ¸ÄËüÖ¸ÏòµÄ¿Õ¼äµÄÄÚÈİ
+	const char* p;//ä»£è¡¨ä¸èƒ½ç”¨på»ä¿®æ”¹å®ƒæŒ‡å‘çš„ç©ºé—´çš„å†…å®¹
 	char c[] = "hello";
 	p = c; 
 	c[0] = 'H';
-	//p[0] = 'm';//²»¿ÉÒÔ
+	//p[0] = 'm';//ä¸å¯ä»¥
 	printf("p = %s\n", p);
 }
 
@@ -83,8 +83,8 @@ void use_const1()
 	char c[] = "hello";
 	char c1[] = "helloworld";
 	char* const p = c;
-	//p = c + 1;²»ĞĞ
-	//p = c1//²»ĞĞ
+	//p = c + 1;ä¸è¡Œ
+	//p = c1//ä¸è¡Œ
 	p[0] = 'A';
 	printf("p = %s\n", p);
 }
