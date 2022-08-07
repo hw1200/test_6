@@ -7,7 +7,7 @@ int f(int n)
 	{
 		return 1;
 	}
-	return n * f(n - 1);//ÕÒ¹«Ê½
+	return n * f(n - 1);//æ‰¾å…¬å¼
 }
 
 int step(int n)
@@ -29,7 +29,7 @@ int main()
 	while (scanf("%d", &n) != EOF)
 	{
 		printf("n! = %d\n",f(n));
-		//printf("n¸öÌ¨½×µÄ×ß·¨ÓĞ{ %d }ÖÖ\n", step(n));
+		//printf("nä¸ªå°é˜¶çš„èµ°æ³•æœ‰{ %d }ç§\n", step(n));
 	}
 
 	system("pause");
