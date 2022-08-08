@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//¶¨Òåhanoiº¯Êı£¬½«n¸öÅÌ´ÓµÚoneÖù½èÖúµÚtwoÖù£¬ÒÆµ½µÚthreeÖù 
+//å®šä¹‰hanoiå‡½æ•°ï¼Œå°†nä¸ªç›˜ä»ç¬¬oneæŸ±å€ŸåŠ©ç¬¬twoæŸ±ï¼Œç§»åˆ°ç¬¬threeæŸ± 
 void hanoi(int n,char one, char two, char three)
 {
-	void move(char x, char y);//¶Ô moveº¯ÊıµÄÉùÃ÷
+	void move(char x, char y);//å¯¹ moveå‡½æ•°çš„å£°æ˜
 	if (n == 1) 
 	{
 		move(one, three);
@@ -17,16 +17,16 @@ void hanoi(int n,char one, char two, char three)
 	}
 	
 }
-void move(char x, char y)//¶¨Òåmoveº¯Êı
+void move(char x, char y)//å®šä¹‰moveå‡½æ•°
 {
 	printf("%c-->%c\n",x,y);
 }
 
 void main()
 {
-	void hanoi(int n, char one, char two, char three); //¶Ôhanoiº¯ÊıµÄÉùÃ÷
+	void hanoi(int n, char one, char two, char three); //å¯¹hanoiå‡½æ•°çš„å£°æ˜
 	int m;
-	printf("ÇëÊäÈëÅÌ×ÓµÄÊıÁ¿:"); 
+	printf("è¯·è¾“å…¥ç›˜å­çš„æ•°é‡:"); 
 	scanf_s("%d", &m);
 	printf("The step to moveing %d diskes:\n", m); 
 	hanoi(m,'A','B','C');
