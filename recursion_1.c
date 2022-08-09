@@ -8,16 +8,16 @@ int main()
 	char c;
 	int i, j,tmp; 
 	char* ptmp;
-	printf("ÇëÊäÈë:");
+	printf("Ã‡Ã«ÃŠÃ¤ÃˆÃ«:");
 	while (scanf("%c", &c) != EOF)
 	{
 		if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
 		{
-			arr[0]++;//alpµÄÊýÄ¿
+			arr[0]++;//alpÂµÃ„ÃŠÃ½Ã„Â¿
 		}
 		else if (c >= '0' && c <= '9')
 		{
-			arr[1]++;//numµÄÊýÁ¿
+			arr[1]++;//numÂµÃ„ÃŠÃ½ÃÂ¿
 		}
 		else if (c != '\n')
 		{
